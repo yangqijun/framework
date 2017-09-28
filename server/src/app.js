@@ -1,12 +1,11 @@
 var express = require('express')
 var path = require('path')
+var StaticResourceConfiger = require('./config/StaticResourceConfiger');
+var Router = require('./Router');
+
 var app = express()
- 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-app.use(express.static('client')) //client dose not have to be the part of url
-// app.use('/client', express.static('client')) //client has to be the part of url
-// app.use('/client', express.static(path.join(__dirname, 'client')))
+
+new StaticResourceConfiger(app, express)
+new Router(app);
  
 app.listen(3000)
