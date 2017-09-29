@@ -49,7 +49,6 @@ Router.prototype = {
                 });
             });
         }
-        console.log(finalRouter);
         return finalRouter;
     }
 };
