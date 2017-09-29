@@ -1,4 +1,4 @@
-var routerConfig = require('./config/routerConfig');
+var routerConfig = require('./config/router');
 var BookController = require('./controller/BookController')
 var METHOD = require('./constant/Method')
 var _ = require("lodash");
