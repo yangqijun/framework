@@ -6,13 +6,13 @@ var fs = require('fs');
 var pem = require('pem');
 
 
-var StaticResourceConfiger = require('./config/StaticResourceConfiger');
+var Static = require('./config/Static');
 var Router = require('./Router');
 var Filter = require('./Filter');
 
 var app = express()
 
-new StaticResourceConfiger(app, express)
+new Static(app, express)
 new Filter(app);
 new Router(app);
 http.createServer(app).listen(3000);

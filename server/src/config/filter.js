@@ -1,8 +1,8 @@
-var ApiFilter = require('.');
-
+var AuthFilter = require("../filter/AuthFilter");
 module.exports = {
-    "/api/*": function(req, res, next) {
-        console.log('Intercepting requests ...');
+    "/*": new AuthFilter().filter,
+    "/data/*": function(req, res, next) {
+        console.log('Intercepting data requests ...');
         res.redirect('/');
     }
 }

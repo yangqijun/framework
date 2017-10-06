@@ -10,7 +10,7 @@ module.exports = {
     "/index.html": {
         "get": new HomeController().home
     },
-    "/api": {
+    "/data": {
         "/book": {
             "/:id": {
                 "get": bookController.get,
