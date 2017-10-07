@@ -7,5 +7,8 @@ class HomeController extends BaseController {
     home(req, res) {
         res.send("Home");
     }
+    loginPage(req, res) {
+        res.send("login page");
+    }
 }
 module.exports = HomeController;

@@ -8,7 +8,7 @@ class AuthFilter {
         if (certificate === "123") {
             next();
         } else {
-            res.redirect("/");
+            res.redirect("/login_page");
         }
     }
 }

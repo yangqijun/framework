@@ -10,6 +10,9 @@ module.exports = {
     "/index.html": {
         "get": new HomeController().home
     },
+    "/login_page": {
+        "get": new HomeController().loginPage
+    },
     "/data": {
         "/book": {
             "/:id": {
